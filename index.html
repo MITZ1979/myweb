@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html>
+	<head>
+		<title>我模仿的58同城</title>
+	<style type="text/css">
+		body{
+			background-image: url("./img/reg-bg.png");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		#all{
+			margin: auto;
+			text-align: center;
+			width: 550px;
+			height: 700px;
+		}
+		#up{
+			color: white;
+			height: 20px;
+		}
+		#upLeft{
+			float: left;
+		}
+		#upRight{
+			float: right;
+		}
+		#down{
+			background: white;
+			width: 550px;
+			height:690px;
+			float: left;
+		}
+		input{
+			height: 48px;
+			font-size: 20px;
+			width: 90%;
+			margin-top: 15px;
+		}
+	</style>
+	<script language="JavaScript">
+		function checkMob() {
+			var inp=document.getElementById("mob");
+
+			if (inp.value==""){
+				document.getElementById("showMobMsg").innerHTML="电话号码不能为空";
+			}else {
+                document.getElementById("showMobMsg").innerHTML="输入正确";
+			}
+        }
+	</script>
+	</head>
+	<body>
+		<div id="all">
+			<div id="up">
+				<div id="upLeft">返回首页</div>
+				<div id="upRight">已有账户？去登录</div>
+			</div>
+			<div id="down">
+				<form action="./regist.php" method="post">
+					<table border="0">
+						<tr>
+							<td><img src="img/58.png" width="540"></td>
+						</tr>
+						<tr>
+							<td><input id="mob" name="mod" placeholder="手机号" onblur="checkMob()"><div id="showMobMsg" style="text-align: left;width:80%;margin-left: 25px;padding: 5px;color: crimson"></div></td>
+						</tr>
+						<tr>
+							<td><input placeholder="验证码" name="checkCode"><div></div></td>
+						</tr>
+						<tr>
+							<td><input placeholder="用户名" name="username"><div></div></td>
+						</tr>
+						<tr>
+							<td><input placeholder="设置密码" name="password"><div></div></td>
+						</tr>
+						<tr>
+							<td><input placeholder="确认密码" name="repassword"><div></div></td>
+						</tr>
+						<tr>
+							<td><input type="checkbox" checked="checked" style="width: 10px;margin-top: 0px;height:10px">我已阅读并同意 《58同城使用协议》 & 《隐私权条款》</td>
+						</tr>
+						<tr>
+							<td><input type="submit" value="提交" style="background-color: coral;border: 0px;color: white;font-size: 20px"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>

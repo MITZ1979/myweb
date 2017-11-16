@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <script language="JavaScript">
+        function changeGD2Code(){
+            document.getElementById("codding").src="getGD2Code2.php?"+Math.random();
+        }
+    </script>
+</head>
+<body>
+<img id="codding" src="getGD2Code2.php">
+<input type="button" value="换一张" onclick="changeGD2Code()">
+</body>
+</html>
