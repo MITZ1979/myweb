@@ -26,7 +26,11 @@ function createGD2Img($n){
     for($i=0;$i<$n;$i++){
         if($i%2==0){
             $randNum=mt_rand(0,9);
-            imagestring ($im, 5, $i*9+5, 2,  $randNum, $text_color);
+            //imagestring ($im, 23, $i*9+5, 2,  $randNum, $text_color);
+            imagettftext($im, 20, 0, $i*9+5, 20, $text_color, "C:/myweb/font/STCAIYUN.TTF",
+                $randNum);
+
+
             imageline ( $im, mt_rand(0,$width), mt_rand(0,20), mt_rand(0,$width), mt_rand(0,20), $line_color);
         }else{
            imageline ( $im, mt_rand(0,$width), mt_rand(0,20), mt_rand(0,$width), mt_rand(0,20), $line_color);

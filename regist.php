@@ -40,6 +40,11 @@ echo "<br>用户名：".$username;
 echo "<br>密码：".$password;
 echo "<br>确认密码：".$repassword;
 
+echo "
+    <script language='JavaScript'>
+        location.href='./index.php';
+    </script>
+";
 
 //echo "<br><br>表单验证如下：";
 //if(preg_match($patternmod,$mod)){

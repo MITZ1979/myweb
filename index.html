@@ -47,6 +47,9 @@
                 document.getElementById("showMobMsg").innerHTML="输入正确";
 			}
         }
+        function change() {
+			document.getElementById("gd2img").src="GD2Code/getGD2Code2.php?n="+Math.random();
+        }
 	</script>
 	</head>
 	<body>
@@ -75,6 +78,11 @@
 						</tr>
 						<tr>
 							<td><input placeholder="确认密码" name="repassword"><div></div></td>
+						</tr>
+						<tr>
+							<td><img id="gd2img" src="GD2Code/getGD2Code2.php" width="70" height="20" >
+								<a href="javascript:change()">看不清？</a>
+								<input placeholder="验证码" name="GD2code" style="width: 200px;height:20px"><div></div></td>
 						</tr>
 						<tr>
 							<td><input type="checkbox" checked="checked" style="width: 10px;margin-top: 0px;height:10px">我已阅读并同意 《58同城使用协议》 & 《隐私权条款》</td>
